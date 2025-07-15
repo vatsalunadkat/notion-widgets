@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quote Widget</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://images.unsplash.com/photo-1476820865390-c52aeebb9891?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat fixed;
+      font-family: 'Lora', serif;
+      display: flex;
+      justify-content: center;
+      /* align-items: flex-end; */
+      align-items: center;
+    }
+
+    .quote-box {
+      /* width: 70%; */
+      height: 10vh;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10vh;
+      padding: 0 2rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .quote-box p {
+      font-size: 2rem;
+      font-style: italic;
+      color: #222;
+      margin: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box">
+    <p>Making memories as big as my dreams...</p>
+  </div>
+</body>
+</html>
