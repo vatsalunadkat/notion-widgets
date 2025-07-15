@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countdown Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background: #111827;
+        color: #f3f4f6;
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        color: #4ade80;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .countdown {
+        font-size: 3rem;
+        color: #facc15;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>⏳ Countdown to Example ⏳</h1>
+    <div class="countdown" id="countdown">--d --h --m --s</div>
+
+    <script>
+      const countdownEl = document.getElementById("countdown");
+      const target = new Date("2025-08-19T00:00:00");
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          countdownEl.textContent = "🎉 Welcome! 🎉";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+        const minutes = Math.floor(diff / (1000 * 60)) % 60;
+        const seconds = Math.floor(diff / 1000) % 60;
+
+        // countdownEl.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        // countdownEl.textContent = `${days}d ${hours}h ${minutes}m`;
+        countdownEl.textContent = `${days} days ${hours} hours`;
+      }
+
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+  </body>
+</html>
